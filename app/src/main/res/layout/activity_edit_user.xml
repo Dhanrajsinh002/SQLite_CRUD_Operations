@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/constraintHeader"
+        android:background="@color/color_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="35dp"
+            android:visibility="visible"
+            android:id="@+id/img_back"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_back_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="EDIT USER DATA"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineDivider"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edName"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Name"
+        style="@style/Edittext"
+        android:inputType="text"
+        android:background="@drawable/bg_editext"
+        app:layout_constraintTop_toBottomOf="@id/constraintHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        android:layout_width="0dp"
+        android:layout_height="45dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edMobile"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Mobile Number"
+        style="@style/Edittext"
+        android:inputType="number"
+        android:maxLength="10"
+        android:background="@drawable/bg_editext"
+        app:layout_constraintTop_toBottomOf="@id/edName"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        android:layout_width="0dp"
+        android:layout_height="45dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:text="UPDATE USER DATA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_white"
+        android:background="@drawable/bg_button"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineDivider"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/guidelineDivider"
+        android:id="@+id/buttonUpdate"
+        android:layout_width="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
